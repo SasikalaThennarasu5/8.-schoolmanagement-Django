@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2>Students</h2>
+<div class="row">
+  {% for s in students %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ s.first_name }} {{ s.last_name }}</h5>
+        <p class="card-text">Roll: {{ s.roll_no }}</p>
+        <a href="{% url 'student_detail' s.pk %}" class="btn btn-outline-primary btn-sm">Details</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

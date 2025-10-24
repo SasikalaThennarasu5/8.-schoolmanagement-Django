@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="text-center mb-4">
+  <h1 class="display-5">Welcome to School of Bright Futures</h1>
+  <p class="lead">A neat, modern interface to manage students, courses, exams and parents.</p>
+</div>
+
+<div class="row">
+  {% for s in students %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      {% if s.photo %}
+        <img src="{{ s.photo.url }}" class="card-img-top" alt="{{ s.first_name }}">
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{ s.first_name }} {{ s.last_name }}</h5>
+        <p class="card-text"><strong>Roll:</strong> {{ s.roll_no }}</p>
+        <a href="{% url 'student_detail' s.pk %}" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

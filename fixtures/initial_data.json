@@ -1,0 +1,71 @@
+[
+  {
+    "model": "core.teacher",
+    "pk": 1,
+    "fields": {
+      "name": "Mr. Arun Kumar",
+      "email": "arun@example.com",
+      "subject": "Mathematics"
+    }
+  },
+  {
+    "model": "core.teacher",
+    "pk": 2,
+    "fields": {
+      "name": "Ms. Leena Rao",
+      "email": "leena@example.com",
+      "subject": "Science"
+    }
+  },
+  {
+    "model": "core.course",
+    "pk": 1,
+    "fields": {
+      "title": "Mathematics 101",
+      "code": "MATH101",
+      "teacher": 1
+    }
+  },
+  {
+    "model": "core.course",
+    "pk": 2,
+    "fields": {
+      "title": "Science 101",
+      "code": "SCI101",
+      "teacher": 2
+    }
+  },
+  {
+    "model": "core.student",
+    "pk": 1,
+    "fields": {
+      "first_name": "Asha",
+      "last_name": "Verma",
+      "dob": "2010-05-12",
+      "roll_no": "S1001",
+      "course": 1
+    }
+  },
+  {
+    "model": "core.student",
+    "pk": 2,
+    "fields": {
+      "first_name": "Ravi",
+      "last_name": "Kumar",
+      "dob": "2010-08-03",
+      "roll_no": "S1002",
+      "course": 2
+    }
+  },
+  {
+    "model": "core.student",
+    "pk": 3,
+    "fields": {
+      "first_name": "Meera",
+      "last_name": "Nair",
+      "dob": "2010-02-20",
+      "roll_no": "S1003",
+      "course": 1
+    }
+  }
+]
